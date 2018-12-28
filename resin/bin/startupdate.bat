@@ -1,0 +1,1 @@
+..\httpd.exe -conf conf/resin3_update.conf
