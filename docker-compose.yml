@@ -1,0 +1,16 @@
+version: '3'
+services:
+    oracle11g:
+        image: hnyize/orcl11gxe
+        ports:
+            - '1521:1521'
+        volumes:
+            - /odata:/u01/app/oracle
+    ec8:
+        image: hnyize/ec8
+        ports:
+            - '80:80'
+        volumes:
+            - /ecology:/root/ecology
+        depends_on:
+            - oracle11g
